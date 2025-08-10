@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/products.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header class="container header">
+    <h1 class="logo">Soniya Shop</h1>
+    <nav class="nav">
+      <a href="index.html" class="nav__link">Products</a>
+      <a href="cart.html" class="nav__link active">Cart (<span id="navCartCount">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Shopping Cart</h2>
+    <div id="cartEmpty" class="card hidden">Your cart is empty. <a href="index.html">Browse products</a>.</div>
+
+    <div id="cartContent" class="cart">
+      <table class="cart__table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th class="center">Price</th>
+            <th class="center">Quantity</th>
+            <th class="right">Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="cartItems"></tbody>
+      </table>
+
+      <div class="cart__summary card">
+        <div class="cart__row">
+          <span>Total</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+        <a class="btn btn--primary w-full" href="checkout.html">Proceed to Checkout</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">&copy; <span id="year"></span> Soniya Shop</div>
+  </footer>
+</body>
+</html>

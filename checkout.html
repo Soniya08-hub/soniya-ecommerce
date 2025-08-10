@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/products.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header class="container header">
+    <h1 class="logo">Soniya Shop</h1>
+    <nav class="nav">
+      <a href="index.html" class="nav__link">Products</a>
+      <a href="cart.html" class="nav__link">Cart (<span id="navCartCount">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Checkout</h2>
+
+    <form id="checkoutForm" class="form card" novalidate>
+      <div class="form__row">
+        <label for="name">Name</label>
+        <input id="name" name="name" required placeholder="Jane Doe" />
+        <small class="error" data-for="name"></small>
+      </div>
+
+      <div class="form__row">
+        <label for="address">Address</label>
+        <input id="address" name="address" required placeholder="123 Main St" />
+        <small class="error" data-for="address"></small>
+      </div>
+
+      <div class="form__row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com" />
+        <small class="error" data-for="email"></small>
+      </div>
+
+      <button class="btn btn--primary" type="submit">Place Order</button>
+    </form>
+
+    <div id="orderMessage" class="card hidden">
+      🎉 Order placed! Check your email for a confirmation (demo).
+      <div><a href="index.html" class="btn btn--ghost">Back to shop</a></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">&copy; <span id="year"></span> Soniya Shop</div>
+  </footer>
+</body>
+</html>
